@@ -1,0 +1,14 @@
+@using FormFactory
+@model FormFactoryTest.Models.Create.CreateSurveyViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Create your own Survey</h2>
+
+<form action="/home/SaveMyForm" method="POST">
+@FF.PropertiesFor(Model).Render(Html)
+<input type="submit" value="submit" />
+</form>
