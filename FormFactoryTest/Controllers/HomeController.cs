@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FormFactoryTest.Models;
+using FormFactoryTest.Models.Create;
 
 namespace FormFactoryTest.Controllers
 {
@@ -16,7 +17,20 @@ namespace FormFactoryTest.Controllers
             return View(example);
         }
 
+        [HttpPost]
         public IActionResult Save(NestedFormsExample2 model)
+        {
+            var test = model;
+            return Ok();
+        }
+        
+        public IActionResult MyForm()
+        {
+            var myform = new CreateSurveyViewModel();
+            return View(myform);
+        }
+
+        public IActionResult SaveMyForm(CreateSurveyViewModel model)
         {
             var test = model;
             return Ok();

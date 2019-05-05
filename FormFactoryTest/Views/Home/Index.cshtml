@@ -4,7 +4,10 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 <form action="/home/save" method="POST">
-@FF.PropertiesFor(Model).Render(Html)
-<input type="submit" value="submit" />
+    @FF.PropertiesFor(Model).Render(Html)
+    <input type="submit" value="submit" />
 </form>
+
+<a asp-controller="Home" asp-action="MyForm"><h2>Also: Click to check out my own example to create a nested survey</h2></a>
