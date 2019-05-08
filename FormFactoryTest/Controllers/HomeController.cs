@@ -30,6 +30,7 @@ namespace FormFactoryTest.Controllers
             return View(myform);
         }
 
+        [HttpPost]
         public IActionResult SaveMyForm(CreateSurveyViewModel model)
         {
             var test = model;
